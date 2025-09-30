@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 98%;
+    --foreground: 224 71.4% 4.1%;
+    --card: 240 10% 96%;
+    --card-foreground: 224 71.4% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 175 80% 45%;
+    --accent-foreground: 175 100% 95%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 70%;
+    --radius: 0.75rem;
+  }
+ 
+  .dark {
+    --background: 240 10% 4%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 8%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 4%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 240 5% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 5% 15%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 175 80% 45%;
+    --accent-foreground: 175 100% 95%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5% 20%;
+    --input: 240 5% 20%;
+    --ring: 217 91% 70%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    min-height: 100vh;
+  }
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer utilities {
+  .glow {
+    box-shadow: 0 0 5px hsl(var(--primary)), 0 0 10px hsl(var(--primary) / 0.8), 0 0 15px hsl(var(--primary) / 0.6);
+  }
+  
+  .glow-green {
+    text-shadow: 0 0 5px hsla(var(--accent)), 0 0 10px hsla(var(--accent) / 0.8), 0 0 15px hsla(var(--accent) / 0.6);
+  }
+
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.5);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
+  }
+}
+
+@keyframes animate-stars {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
+
+#stars-sm,
+#stars-md,
+#stars-lg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: animate-stars 150s linear infinite;
+}
+
+.stars-bg #stars-sm {
+  background-image: radial-gradient(1px 1px at 50px 100px, white, transparent),
+    radial-gradient(1px 1px at 150px 250px, white, transparent),
+    radial-gradient(1px 1px at 275px 80px, white, transparent),
+    radial-gradient(1px 1px at 400px 320px, white, transparent),
+    radial-gradient(1px 1px at 550px 120px, white, transparent),
+    radial-gradient(1px 1px at 680px 450px, white, transparent);
+  background-repeat: repeat;
+  background-size: 800px 600px;
+  animation-duration: 150s;
+}
+
+.stars-bg #stars-md {
+  background-image: radial-gradient(1.5px 1.5px at 100px 200px, white, transparent),
+    radial-gradient(1.5px 1.5px at 300px 50px, white, transparent),
+    radial-gradient(1.5px 1.5px at 500px 300px, white, transparent),
+    radial-gradient(1.5px 1.5px at 700px 500px, white, transparent);
+  background-repeat: repeat;
+  background-size: 1200px 800px;
+  animation-duration: 100s;
+}
+
+.stars-bg #stars-lg {
+  background-image: radial-gradient(2px 2px at 200px 400px, white, transparent),
+    radial-gradient(2px 2px at 600px 150px, white, transparent),
+    radial-gradient(2px 2px at 900px 550px, white, transparent);
+  background-repeat: repeat;
+  background-size: 1600px 1200px;
+  animation-duration: 75s;
+}
+
+.cmatrix-bg {
+    background-color: #000;
+    overflow: hidden;
+    position: relative;
+}
+
+.cmatrix-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(to bottom, transparent 90%, hsl(var(--background)) 100%),
+        repeating-linear-gradient(0deg,
+            rgba(0, 255, 0, 0.15) 0,
+            rgba(0, 255, 0, 0.15) 1px,
+            transparent 1px,
+            transparent 1.2rem
+        );
+    animation: cmatrix-scroll 20s linear infinite;
+    z-index: 0;
+}
+
+@keyframes cmatrix-scroll {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 -100%;
+    }
+}
