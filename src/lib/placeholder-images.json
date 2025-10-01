@@ -2,39 +2,45 @@
   "placeholderImages": [
     {
       "id": "about-photo",
-      "description": "A professional portrait of a student.",
-      "imageUrl": "https://images.unsplash.com/photo-1607990283143-e81e7a2c9349?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTkwMzU5Mjd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "professional portrait"
-    },
-    {
-      "id": "project-cloud-orchestrator",
-      "description": "Abstract visualization of cloud infrastructure.",
-      "imageUrl": "https://images.unsplash.com/photo-1629058800469-387d7a6e0c98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjbG91ZCUyMGluZnJhc3RydWN0dXJlfGVufDB8fHx8MTc1OTA1MjQ0Mnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "cloud infrastructure"
-    },
-    {
-      "id": "project-secure-vault",
-      "description": "A digital representation of a secure vault.",
-      "imageUrl": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxkaWdpdGFsJTIwc2VjdXJpdHl8ZW58MHx8fHwxNzU4OTk3NTUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "digital security"
-    },
-    {
-      "id": "project-nebula-racer",
-      "description": "A futuristic spaceship racing through a nebula.",
-      "imageUrl": "https://images.unsplash.com/photo-1547830108-8be705ada1a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzcGFjZSUyMGdhbWV8ZW58MHx8fHwxNzU5MDM4NDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "space game"
-    },
-    {
-      "id": "project-devops-pipeline",
-      "description": "A visual representation of a CI/CD pipeline.",
-      "imageUrl": "https://images.unsplash.com/photo-1572089479354-d280e47c12cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkYXRhJTIwcGlwZWxpbmV8ZW58MHx8fHwxNzU4OTQyODQzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "data pipeline"
+      "description": "A portrait of a student.",
+      "imageUrl": "/images/about-photo.jpg",
+      "imageHint": "portrait"
     },
     {
       "id": "project-devops-qr",
-      "description": "A person scanning a QR code with a phone.",
-      "imageUrl": "https://images.unsplash.com/photo-1606190234739-c5a539b7b7a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxxciUyMGNvZGV8ZW58MHx8fHwxNzU5OTI4MTM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "qr code"
+      "description": "DevOps-QR Project",
+      "imageUrl": "/images/project-devops-qr.jpg",
+      "imageHint": "qr code app"
+    },
+    {
+      "id": "project-tracknclassify",
+      "description": "A multilayered authentication system.",
+      "imageUrl": "/images/project-tracknclassify.jpg",
+      "imageHint": "authentication system"
+    },
+    {
+      "id": "project-fitzee",
+      "description": "A Fitness Android App",
+      "imageUrl": "/images/project-fitzee.jpg",
+      "imageHint": "fitness app"
+    },
+    {
+      "id": "project-cloud-security",
+      "description": "A secure visualization of cloud infrastructure.",
+      "imageUrl": "/images/project-cloud-security.jpg",
+      "imageHint": "secure cloud infrastructure"
+    },
+    {
+      "id": "project-cloud-resume",
+      "description": "A resume on a cloud background.",
+      "imageUrl": "/images/project-cloud-resume.jpg",
+      "imageHint": "cloud resume"
+    },
+    {
+      "id": "project-raspberry-pi-nas",
+      "description": "A Raspberry Pi device set up as a NAS.",
+      "imageUrl": "/images/project-raspberry-pi-nas.jpg",
+      "imageHint": "raspberry pi"
     }
   ]
 }

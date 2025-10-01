@@ -59,7 +59,7 @@ const getImageUrl = (id: string) => {
   const image = PlaceHolderImages.find((img) => img.id === id);
   return image
     ? { url: image.imageUrl, hint: image.imageHint }
-    : { url: "https://picsum.photos/seed/placeholder/600/400", hint: "placeholder" };
+    : { url: "/images/placeholder.png", hint: "placeholder" };
 };
 
 export const about = {
@@ -72,6 +72,7 @@ export const about = {
 export const projects: {
   title: string;
   year: string;
+  month: number;
   description: string;
   technologies: string[];
   links: {
@@ -84,6 +85,7 @@ export const projects: {
   {
     title: "DevOps QR Code",
     year: "2025",
+    month: 3,
     description: "The goal is to get hands-on with DevOps practices like containerization, CI/CD and monitoring.",
     technologies: ["CI/CD", "Docker", "AWS", "Terraform", "Kubernetes", "DevOps", "Git/Github", "Python", "FastAPI"],
     links: [
@@ -95,6 +97,7 @@ export const projects: {
   {
     title: "TrackNClassify",
     year: "2024",
+    month: 11,
     description:
       "A multilayered authentication system reducing unauthorized access by 80%, with QR code and RFID integration. Deployed on the cloud with 99% uptime and IoT components.",
     technologies: ["MERN Stack", "MongoDB", "Express.js", "React", "Node.js", "IoT", "Team Project"],
@@ -102,11 +105,12 @@ export const projects: {
       { label: "GitHub", href: "https://github.com/lucifer47C/TrackNClassify-Major", icon: Github },
       { label: "Medium", href: "#", icon: Book },
     ],
-    image: getImageUrl("project-secure-vault"),
+    image: getImageUrl("project-tracknclassify"),
   },
   {
     title: "FitZee",
     year: "2024",
+    month: 4,
     description:
       "An Android app for BMI calculation and meal calorie estimation through image recognition. Features a user interface created with Java and XML.",
     technologies: ["Android Studio", "Java", "XML", "Firebase", "Team Project"],
@@ -114,11 +118,12 @@ export const projects: {
       { label: "GitHub", href: "https://github.com/lucifer47C/FitZee-Minor", icon: Github },
       { label: "Medium", href: "#", icon: Book },
     ],
-    image: getImageUrl("project-devops-pipeline"),
+    image: getImageUrl("project-fitzee"),
   },
   {
     title: "Cloud Security and Management",
     year: "2024",
+    month: 3,
     description:
       "A university assignment focusing on cloud security principles and infrastructure management using modern DevOps tools.",
     technologies: ["Docker", "AWS", "Cloud", "Terraform", "Kubernetes"],
@@ -126,11 +131,12 @@ export const projects: {
       { label: "GitHub", href: "#", icon: Github },
       { label: "Medium", href: "#", icon: Book },
     ],
-    image: getImageUrl("project-cloud-orchestrator"),
+    image: getImageUrl("project-cloud-security"),
   },
   {
     title: "Cloud Resume Challenge",
     year: "2022",
+    month: 12,
     description:
       "The main goal is to get hands-on with some cloud technologies like Lambda, IAM etc.",
     technologies: ["Docker", "AWS", "Cloud", "Terraform", "GitHub Actions"],
@@ -138,11 +144,12 @@ export const projects: {
       { label: "GitHub", href: "https://github.com/lucifer47C/The-Cloud-Resume-Challenge", icon: Github },
       { label: "Medium", href: "https://medium.com/@steveyadav.2002newdelhi/how-i-built-my-cloud-resume-challenge-on-aws-with-terraform-ci-cd-and-a-serverless-visitor-f64cf7a5414d", icon: Book },
     ],
-    image: getImageUrl("project-cloud-orchestrator"),
+    image: getImageUrl("project-cloud-resume"),
   },
   {
     title: "Raspberry Pi NAS",
     year: "2023",
+    month: 7,
     description:
       "An experiment turning a Raspberry Pi into a Network Attached Storage (NAS) using OpenMediaVault for private cloud storage with scalable file sharing.",
     technologies: ["Raspberry Pi", "OpenMediaVault", "NAS"],
@@ -150,7 +157,7 @@ export const projects: {
         { label: "GitHub", href: "#", icon: Github },
         { label: "Medium", href: "https://medium.com/@steveyadav.2002newdelhi/how-i-turned-a-raspberry-pi-into-a-nas-for-better-and-cheaper-file-sharing-1f7ee962aa1f", icon: Book },
     ],
-    image: getImageUrl("project-nebula-racer"),
+    image: getImageUrl("project-raspberry-pi-nas"),
   },
 ];
 
@@ -223,6 +230,7 @@ export const skills: {
       { name: "MySQL", level: "Advanced" },
       { name: "Android", level: "Intermediate" },
       { name: "Linux", level: "Advanced" },
+      
     ],
   },
 ];

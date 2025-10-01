@@ -17,7 +17,13 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 
 export default function ArchivePage() {
-  const sortedProjects = [...projects].sort((a, b) => parseInt(b.year) - parseInt(a.year));
+  const sortedProjects = [...projects].sort((a, b) => {
+    const yearDifference = parseInt(b.year) - parseInt(a.year);
+    if (yearDifference !== 0) {
+      return yearDifference;
+    }
+    return b.month - a.month;
+  });
 
   return (
       <div className="container mx-auto py-12 md:py-16 lg:py-20 relative z-10">
