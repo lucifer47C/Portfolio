@@ -8,12 +8,6 @@ import {
   Phone,
   type LucideIcon,
   Book,
-  Git,
-  GitBranch,
-  Container,
-  Shield,
-  Gamepad2,
-  Award,
   Terminal,
 } from "lucide-react";
 import { PlaceHolderImages } from "./placeholder-images";
@@ -40,12 +34,6 @@ export const SOCIAL_LINKS: {
     url: "mailto:steveyadav.2002newdelhi@gmail.com",
     icon: Mail,
     value: "steveyadav.2002newdelhi@gmail.com",
-  },
-  {
-    name: "Phone",
-    url: "tel:+919891157854",
-    icon: Phone,
-    value: "+91 98911 57854",
   },
   {
     name: "LinkedIn",

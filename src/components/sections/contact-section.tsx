@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { submitContactForm } from "@/app/actions";
+import { submitContactForm, type FormState } from "@/app/actions";
 import { Loader2, Mail, Phone, MapPin, Send, Share2, Github, Linkedin } from "lucide-react";
 import { SOCIAL_LINKS } from "@/lib/data";
 
@@ -38,7 +38,7 @@ export default function ContactSection() {
   
 
   const socialEmail = SOCIAL_LINKS.find(link => link.name === 'Email');
-  const phone = SOCIAL_LINKS.find(link => link.name === 'Phone');
+
   const github = SOCIAL_LINKS.find(link => link.name === 'GitHub');
   const linkedin = SOCIAL_LINKS.find(link => link.name === 'LinkedIn');
 
@@ -72,15 +72,7 @@ export default function ContactSection() {
                         </div>
                     </div>
                 )}
-                {phone && (
-                    <div className="flex items-start gap-4">
-                        <Phone className="mt-1 h-5 w-5 text-muted-foreground" />
-                        <div>
-                            <p className="font-semibold">Phone</p>
-                            <a href={phone.url} className="text-muted-foreground hover:text-primary">{phone.value}</a>
-                        </div>
-                    </div>
-                )}
+                
                 <div className="flex items-start gap-4">
                     <MapPin className="mt-1 h-5 w-5 text-muted-foreground" />
                     <div>
