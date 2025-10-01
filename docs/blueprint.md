@@ -1,4 +1,4 @@
-# **App Name**: Digital Fortress Portfolio
+# **Name**: Portfolio
 
 ## Core Features:
 
