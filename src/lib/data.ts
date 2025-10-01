@@ -31,9 +31,9 @@ export const SOCIAL_LINKS: {
 }[] = [
   {
     name: "Email",
-    url: "mailto:steveyadav.2002newdelhi@gmail.com",
+    url: "mailto:stevesyadav@gmail.com",
     icon: Mail,
-    value: "steveyadav.2002newdelhi@gmail.com",
+    value: "stevesyadav@gmail.com",
   },
   {
     name: "LinkedIn",
