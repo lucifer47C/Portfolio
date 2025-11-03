@@ -3,6 +3,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, Code2, Book } from "lucide-react";
 import { NAV_LINKS, about, SOCIAL_LINKS } from "@/lib/data";
 import { ThemeToggle } from "./theme-toggle";
@@ -11,6 +12,7 @@ import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import { cn } from "@/lib/utils";
 
 export function Header() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
@@ -23,6 +25,13 @@ export function Header() {
   }, []);
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
+
+  const getLinkHref = (href: string) => {
+    if (href.startsWith("http") || href.startsWith("mailto")) {
+      return href;
+    }
+    return pathname === "/" ? href : `/${href}`;
+  };
 
   return (
     <header
@@ -51,7 +60,7 @@ export function Header() {
               })}
             >
               <Link
-                href={link.href}
+                href={getLinkHref(link.href)}
                 target={link.external ? "_blank" : undefined}
                 rel={link.external ? "noopener noreferrer" : undefined}
               >
@@ -84,7 +93,7 @@ export function Header() {
                     className="justify-start"
                   >
                     <Link
-                      href={link.href}
+                      href={getLinkHref(link.href)}
                       className="text-lg transition-colors hover:text-primary font-mono flex items-center gap-2"
                       onClick={closeMobileMenu}
                       target={link.external ? "_blank" : undefined}
