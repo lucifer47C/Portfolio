@@ -22,6 +22,12 @@ const certifications = [
     icon: Award,
     url: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=FAA9E460EC78A5F8BC7DC2780D07B5229F4FA0FD8C1D470F11F976A2C7A2B4A6",
   },
+  {
+    name: "Oracle Cloud Infrastructure 2025 Multicloud Architect Professional",
+    year: "2025",
+    icon: Award,
+    url: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=4E6FBADE184D606D75972FAF250E20B6E9C2F0C17D83099A82B76A6F8B2A0CB8",
+  },
 ];
 
 export default function CertificationsSection() {
