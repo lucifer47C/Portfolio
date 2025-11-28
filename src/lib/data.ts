@@ -11,7 +11,8 @@ import {
   Terminal,
 } from "lucide-react";
 import { PlaceHolderImages } from "./placeholder-images";
-import { AwsIcon, AzureIcon, DockerIcon, KubernetesIcon, LinuxIcon, MysqlIcon, PythonIcon, TerraformIcon, AndroidIcon } from "@/components/icons";
+import { AwsIcon, AzureIcon, DockerIcon, KubernetesIcon, LinuxIcon, MysqlIcon, PythonIcon, TerraformIcon, AndroidIcon, AmazonWebServicesIcon, OracleIcon } from "@/components/icons";
+import type { ComponentType, SVGProps } from "react";
 
 export const NAV_LINKS = [
   { href: "#about", label: "About" },
@@ -232,5 +233,31 @@ export const skills: {
       { name: "Linux", level: "Advanced" },
       
     ],
+  },
+];
+
+export const certifications: {
+  name: string;
+  year: string;
+  icon: ComponentType<SVGProps<SVGSVGElement>>;
+  url: string;
+}[] = [
+  {
+    name: "AWS Certified Solutions Architect – Associate",
+    year: "2024",
+    icon: AmazonWebServicesIcon,
+    url: "https://www.credly.com/badges/d58cbe69-3392-4feb-a767-9c6380df237f/public_url",
+  },
+  {
+    name: "Oracle Cloud Infrastructure 2025 Certified DevOps Professional",
+    year: "2025",
+    icon: OracleIcon,
+    url: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=FAA9E460EC78A5F8BC7DC2780D07B5229F4FA0FD8C1D470F11F976A2C7A2B4A6",
+  },
+  {
+    name: "Oracle Cloud Infrastructure 2025 Multicloud Architect Professional",
+    year: "2025",
+    icon: OracleIcon,
+    url: "#",
   },
 ];
