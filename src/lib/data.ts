@@ -258,6 +258,6 @@ export const certifications: {
     name: "Oracle Cloud Infrastructure 2025 Multicloud Architect Professional",
     year: "2025",
     icon: OracleIcon,
-    url: "#",
+    url: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=4E6FBADE184D606D75972FAF250E20B6E9C2F0C17D83099A82B76A6F8B2A0CB8",
   },
 ];
