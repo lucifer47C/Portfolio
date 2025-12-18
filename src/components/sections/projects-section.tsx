@@ -65,7 +65,7 @@ export default function ProjectsSection() {
       </div>
       <div className="mt-12 text-center">
         <Button asChild variant="link" className="group text-lg">
-            <Link href="/archive">
+            <Link href="/archive/projectpage.tsx">
                 View Full Project Archive
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Link>
