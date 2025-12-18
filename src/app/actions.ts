@@ -1,7 +1,6 @@
 "use server";
 
 import { z } from "zod";
-import nodemailer from "nodemailer";
 
 export type FormState = {
   message: string;
@@ -15,46 +14,32 @@ const contactSchema = z.object({
   message: z.string().min(10, "Message must be at least 10 characters."),
 });
 
-export async function submitContactForm(formData: FormData): Promise<FormState> {
-  const validatedFields = contactSchema.safeParse({
+export async function submitContactForm(
+  formData: FormData
+): Promise<FormState> {
+  const validated = contactSchema.safeParse({
     name: formData.get("name"),
     email: formData.get("email"),
     subject: formData.get("subject"),
     message: formData.get("message"),
   });
 
-  if (!validatedFields.success) {
-    const issues = validatedFields.error.flatten().fieldErrors;
+  if (!validated.success) {
     return {
       message: "Error: Please check your input.",
-      issues: Object.values(issues).flat(),
+      issues: Object.values(validated.error.flatten().fieldErrors).flat(),
     };
   }
 
-  try {
-    const { name, email, subject, message } = validatedFields.data;
+  // call API
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/contact`, {
+    method: "POST",
+    body: JSON.stringify(validated.data),
+  });
 
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || "smtp.gmail.com",
-      port: Number(process.env.SMTP_PORT || 465),
-      secure: (process.env.SMTP_SECURE ?? "true") === "true",
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    });
-
-    await transporter.sendMail({
-      from: `"${name}" <${process.env.SMTP_USER}>`,
-      to: process.env.EMAIL_TO || process.env.SMTP_USER,
-      subject: `Portfolio contact: ${subject}`,
-      text: `From: ${name} <${email}>\n\n${message}`,
-      html: `<p>From: <strong>${name}</strong> &lt;${email}&gt;</p><hr/><p>${message}</p>`,
-    });
-
-    return { message: "Success! Your message has been sent." };
-  } catch (err) {
-    console.error("submitContactForm error:", err);
+  if (!res.ok) {
     return { message: "An unexpected error occurred. Please try again." };
   }
+
+  return { message: "Success! Your message has been sent." };
 }
