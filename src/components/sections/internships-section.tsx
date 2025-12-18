@@ -43,7 +43,7 @@ export default function InternshipsSection() {
       </div>
       <div className="mt-12 text-center">
         <Button asChild variant="link" className="group text-lg">
-            <Link href="/archive/internshippage.tsx">
+            <Link href="/archive/internships">
                 View Full Internship Archive
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Link>
