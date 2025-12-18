@@ -1,5 +1,3 @@
 # Personal Portfolio
-
-This is a NextJS starter.
-
-To get started, take a look at src/app/page.tsx.
+My very own portfolio website.
+This is a NextJS starter for me.
