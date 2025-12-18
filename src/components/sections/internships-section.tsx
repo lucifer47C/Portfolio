@@ -1,6 +1,8 @@
 import React from "react";
+import Link from "next/link";
 import { internships } from "@/lib/data";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function InternshipsSection() {
   return (
@@ -10,7 +12,7 @@ export default function InternshipsSection() {
       </h2>
       <div className="relative max-w-3xl mx-auto">
         <div className="absolute left-3 top-3 h-full w-0.5 bg-border -z-10"></div>
-        {internships.map((internship, index) => (
+        {internships.slice(0,2).map((internship, index) => (
           <div key={index} className="relative pl-8 mb-12">
             <div className="absolute left-0 top-1.5 h-4 w-4 rounded-full bg-primary ring-4 ring-background"></div>
             <div className="p-6 rounded-lg border bg-card text-card-foreground shadow-sm">
@@ -38,6 +40,14 @@ export default function InternshipsSection() {
             </div>
           </div>
         ))}
+      </div>
+      <div className="mt-12 text-center">
+        <Button asChild variant="link" className="group text-lg">
+            <Link href="/internships">
+                View Full Internship Archive
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Link>
+        </Button>
       </div>
     </section>
   );

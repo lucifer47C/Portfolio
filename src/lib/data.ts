@@ -167,6 +167,7 @@ export const internships: {
   role: string;
   duration: string;
   achievements: string[];
+  //image?: { url: string; hint: string };
 }[] = [
   {
     company: "IBM",
@@ -177,6 +178,7 @@ export const internships: {
       "Achieved 100% deployment on AWS using services like S3, EC2, CloudWatch, and RDS.",
       "Engineered the solution for 0% human intervention for disaster recovery.",
     ],
+    //image: getImageUrl("cert-ibm"),
   },
   {
     company: "DRDO",
@@ -187,6 +189,7 @@ export const internships: {
       "Implemented quantum circuits and algorithms like Shor's and Grover's search algorithm.",
       "Learned about various quantum algorithms and their applications.",
     ],
+    //image: getImageUrl("cert-drdo"),
   },
   {
     company: "Hara Jeevan",
@@ -197,6 +200,7 @@ export const internships: {
       "Manually migrated the entire website without the help of any plugins.",
       "Worked with WordPress, MySQL, HTML, CSS, etc.",
     ],
+    //image: getImageUrl("cert-hara-jeevan"),
   },
 ];
 
