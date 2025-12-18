@@ -21,7 +21,7 @@ export const NAV_LINKS = [
   { href: "#skills", label: "Skills" },
   { href: "#certifications", label: "Certifications" },
   { href: "#contact", label: "Contact" },
-  { href: "https://example.com", label: "Terminal", icon: Terminal, external: true },
+  { href: "https://terminal.steveyadav.com/", label: "Terminal", icon: Terminal, external: true },
 ];
 
 export const SOCIAL_LINKS: {
