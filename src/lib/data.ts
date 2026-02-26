@@ -130,7 +130,7 @@ export const projects: {
     technologies: ["Docker", "AWS", "Cloud", "Terraform", "Kubernetes"],
     links: [
       { label: "GitHub", href: "#", icon: Github },
-      { label: "Medium", href: "#", icon: Book },
+      { label: "Medium", href: "https://medium.com/@steveyadav/building-a-secure-3-tier-aws-architecture-for-securecloud-solutions-411f64408d8d", icon: Book },
     ],
     image: getImageUrl("project-cloud-security"),
   },
